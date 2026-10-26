@@ -1,3 +1,15 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#6f6574">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Raquel Lopes · Psicóloga e neuropsicóloga em Mossoró">
+<meta property="og:description" content="Atendimento em consultório na West Clinical, bairro Doze Anos, Mossoró (RN). Fale pelo WhatsApp (84) 99609-0800.">
+<meta property="og:image" content="assets/raquel-retrato.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%237b3a62'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23e9cf98'%3ERL%3C/text%3E%3C/svg%3E">
 <title>Raquel Lopes Psicologia</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Raquel Lopes, psicóloga e neuropsicóloga em Mossoró (RN). Atendimento na West Clinical, sala 302, bairro Doze Anos.">
@@ -126,7 +138,7 @@ p{margin:0}
 /* HERO */
 .hero{position:relative;background:radial-gradient(120% 90% at 70% 40%,var(--studio-glow) 0%,var(--studio) 45%,var(--studio-deep) 100%);color:#fff;overflow:hidden;isolation:isolate}
 .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 15% 85%,rgba(185,138,62,.22),transparent 70%);z-index:-1;pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1fr;min-height:min(100svh,920px)}
+.hero-grid{display:grid;grid-template-columns:1fr}
 .hero-media{position:relative;z-index:2;order:-1;height:clamp(360px,56vh,540px);margin-top:calc(64px + env(safe-area-inset-top,0px));margin-left:calc(-1 * var(--gutter-l));margin-right:calc(-1 * var(--gutter-r))}
 .hero-media .frame{position:absolute;inset:0;overflow:hidden;clip-path:inset(0 0 0 0)}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:52% 22%;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
@@ -147,7 +159,7 @@ p{margin:0}
 .scroll-cue i::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:#fff;animation:cue 2.2s var(--ease) infinite}
 @keyframes cue{to{top:110%}}
 @media (min-width:900px){
-  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:stretch}
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:stretch;min-height:min(100svh,920px)}
   .hero-copy{order:1;padding-block:calc(72px + 6vh) 8vh;padding-right:12px;margin-top:0}
   .hero-media{order:2;height:auto;margin-top:0;margin-left:0;margin-right:calc(-1 * max(40px,env(safe-area-inset-right,0px)))}
   .hero-media img{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 28%);mask-image:linear-gradient(90deg,transparent 0%,#000 28%);object-position:46% 30%}
@@ -397,6 +409,17 @@ section[id]{scroll-margin-top:72px}
 /* ASSISTENTE (sempre à esquerda) */
 .ai-launch{position:fixed;z-index:80;left:calc(16px + env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:10px;min-height:52px;padding:6px 18px 6px 6px;border-radius:999px;border:0;background:var(--fg);color:var(--bg);font:600 var(--s-sm)/1 var(--f-body);cursor:pointer;box-shadow:0 18px 40px -16px rgba(10,15,35,.6);transition:transform .4s var(--ease),opacity .3s}
 .ai-launch:hover{transform:translateY(-3px)}
+@media (max-width:699px){
+  .ai-launch{padding:6px;min-height:0;left:calc(12px + env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+  .ai-launch .ai-label{display:none}
+  .ai-launch .dot{width:48px;height:48px}
+  .top .wrap{height:64px}
+  .brand b{font-size:1.25rem}
+  .brand small{font-size:.58rem}
+  .btn-row .btn{flex:1 1 auto;justify-content:center}
+  .scroll-cue{display:none}
+  .hero-copy{padding-bottom:48px}
+}
 .ai-launch .dot{width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;position:relative}
 .ai-launch .dot svg{width:20px;height:20px}
 .ai-launch .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--accent);opacity:.6;animation:ring 2.8s var(--ease) infinite}
@@ -450,6 +473,8 @@ section[id]{scroll-margin-top:72px}
   .video-frame video{animation:none}
 }
 </style>
+</head>
+<body>
 
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <div class="curtain" aria-hidden="true"><span></span></div>
@@ -817,9 +842,9 @@ section[id]{scroll-margin-top:72px}
 </footer>
 
 <!-- ASSISTENTE VIRTUAL -->
-<button class="ai-launch" id="ai-launch" type="button" aria-expanded="false" aria-controls="ai">
+<button class="ai-launch" id="ai-launch" type="button" aria-expanded="false" aria-controls="ai" aria-label="Abrir assistente virtual: tire suas dúvidas">
   <span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8c-1.3 0-2.6-.3-3.7-.9L4 20l1-4c-.6-1.2-1-2.6-1-4z"/></svg></span>
-  Tire suas dúvidas
+  <span class="ai-label">Tire suas dúvidas</span>
 </button>
 <section class="ai" id="ai" role="dialog" aria-modal="false" aria-labelledby="ai-title">
   <div class="ai-head">
@@ -907,7 +932,7 @@ section[id]{scroll-margin-top:72px}
   /* ---------- Cabeçalho ---------- */
   const top = document.getElementById("topo");
   const hero = document.getElementById("inicio");
-  const onScrollHeader = () => { top.classList.toggle("is-solid", scrollY > hero.offsetHeight - 90); };
+  const onScrollHeader = () => { top.classList.toggle("is-solid", scrollY > 40); };
 
   /* ---------- Parallax ---------- */
   const px = reduce ? [] : [...document.querySelectorAll("[data-parallax]")];
@@ -1254,3 +1279,6 @@ COMO RESPONDER:
   document.querySelectorAll("#ai-chips button").forEach(b => b.addEventListener("click", () => ask(b.textContent)));
 })();
 </script>
+
+</body>
+</html>
